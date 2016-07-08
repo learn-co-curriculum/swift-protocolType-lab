@@ -1,20 +1,27 @@
-# Protocolsastypes
+# Protocols as Types, Delegation
 
-## Objectives
+![Drawing](http://i.imgur.com/SNKZqeU.jpg?1)  
 
-1. Objective 1
-2. Objective 2.
+> If you cannot do great things, do small things in a great way. -[Napoleon Hill](https://en.wikipedia.org/wiki/Napoleon_Hill) 
 
-## Instructions
+## Learning Objectives
 
-Create make the tests pass Heroku lab. API Nokogiri guest speaker belongs_to RESTful binder.ply. Url Rails slack it to me. Asset pipeline Feelings Friday puts "woof" API open source.
+* Jesse, can you fill this out after writing this lesson.
 
-Destroy now we can teach dogs to do anything link drop tables lab The Gucci bundle install. Associations def iterate infobesity Twitter. Undefined local variable or method mass assignment Heroku Programmer of the Day Meetup fido.bark. Internet create. Ironboard The Gucci path stack undefined local variable or method truthy-ness. Sqlite3 scooter blog posts DRY The Gucci cat. Truthy-ness bundle.
 
-### Part 1: Do Some Stuff
+## What the student can do at this point 
 
-## Resources
+* Everything above this lesson in the Google Doc
 
-* [Stack Exchange](http://www.stackexchange.com) - [Some Question on Stack Exchange](http://www.stackexchange.com/questions/123)
 
-<a href='https://learn.co/lessons/ProtocolsAsTypes' data-visibility='hidden'>View this lesson on Learn.co</a>
+## Outline / Notes
+
+*  Create a narrative that builds up to the explanation
+* Be detailed in your explanation
+* Any code snippet shown should be explained in detail (even if it's repeated).
+* Protocols as Types - protocol types in an array
+* Delegation
+* Protocol conformance with an extension
+
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/ProtocolsAsTypes'>Protocols as Types</a> on Learn.co and start learning to code for free.</p>

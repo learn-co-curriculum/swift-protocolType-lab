@@ -135,7 +135,7 @@ Delegation is a design pattern that enables a class or structure to hand off (or
 
 We're going to go into a story about a child and his mother.
 
-![(https://media.giphy.com/media/rrnrVJ6SLR6Xm/giphy.gif)
+![](https://media.giphy.com/media/rrnrVJ6SLR6Xm/giphy.gif)
 
 Lets paint the picture.
 

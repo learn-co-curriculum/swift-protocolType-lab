@@ -101,7 +101,7 @@ printYourFavThings(frisky)
 // The song I listen to the most is Meow Mix
 ```
 
-We're calling on this newly made function, `printYourFavThings(_:)`, passing in something that conforms to the `FavoriteThings` protocol (`frisky` does). When we to print `entity.favColor` we know that this code will run because anything passed into this function conforms to this protocol which means it _must_ have this property.
+We're calling on this newly made function, `printYourFavThings(_:)`, passing in something that conforms to the `FavoriteThings` protocol (`frisky` does). When we to print `entity.favColor` we know that this code will run because anything passed into this function conforms to this protocol, which means it _must_ have this property.
 
 What about storing protocol types in an array?
 
@@ -109,7 +109,7 @@ What about storing protocol types in an array?
 let favorites: [FavoriteThings] = [frisky, jeff]
 ```
 
-Here's an example of constant called `favorites` of type [`FavoriteThings`]. It is then assigned a value which is an array that includes `frisky` which is a `Cat` and `jeff` which is a `Person`. Even though `Cat` & `Person` are different types, they both conform to `FavoriteThings` and since Protocols themselves are types we are allowed to store both of these instances in an array like this.
+Here's an example of constant called `favorites` of type [`FavoriteThings`]. It is then assigned a value, which is an array that includes `frisky`, which is a `Cat`, and `jeff`, which is a `Person`. Even though `Cat` & `Person` are different types, they both conform to `FavoriteThings` and since Protocols themselves are types we are allowed to store both of these instances in an array like this.
 
 Lets loop over the array and print out some items.
 
@@ -127,7 +127,7 @@ for entity in favorites {
 // The song I listen to the most is Foldgers In Your Cup
 ```
 
-The first time through this for loop, `entity` is `frisky`. Within the scope of this for loop, we don't know that `entity` is a `Cat`, we just know that it's a `FavoriteThings` which means we only have access to the functions/properties available to a `FavoriteThings` type, not a `Cat`. The second time through the for loop, `entity` is now `jeff` which is a `Person`. Similarly, we only have access to the properties available on `FavoriteThings`.
+The first time through this for loop, `entity` is `frisky`. Within the scope of this for loop, we don't know that `entity` is a `Cat`, we just know that it's a `FavoriteThings`, which means we only have access to the functions/properties available to a `FavoriteThings` type, not a `Cat`. The second time through the for loop, `entity` is now `jeff`, which is a `Person`. Similarly, we only have access to the properties available on `FavoriteThings`.
 
 # Delegation
 
@@ -203,7 +203,7 @@ If we wanted to call on this function, we would do so like this:
 jim.wantsFoodFromMom(maryann)
 ```
 
-This instance method on any `Baby` can be called. When it is called, you must pass in an instance of `Mom`. Here we're passing in `maryann` which is an instance of `Mom`. 
+This instance method on any `Baby` can be called. When it is called, you must pass in an instance of `Mom`. Here we're passing in `maryann`, which is an instance of `Mom`. 
 
 
 So `jim` calls on this method, passing in `maryann` and all is right in the world.
@@ -229,7 +229,7 @@ class Baby {
 }
 ```
 
-There's now a property called `delegate` of type `ParentDelegate?`. It's an optional `ParentDelegate` which means its default value is `nil`. We don't need to add onto the initializer because this new property has a default value of `nil` because it's an optional. 
+There's now a property called `delegate` of type `ParentDelegate?`. It's an optional `ParentDelegate`, which means its default value is `nil`. We don't need to add onto the initializer because this new property has a default value of `nil` because it's an optional. 
 
 So instead of having a function take in a `Mom` as an argument, we can do something like this:
 
@@ -248,7 +248,7 @@ class Baby {
 }
 ```
 
-This `wantsFood()` function can be called on by any instance of a `Baby`. It will then (using optional chaining) attempt to call on a function on the instance property named `delegate` which is of type `ParentDelegate?`. If it's _not_ nil, then it will call on the `feedBaby()` function on that instance which was assigned to the `delegate` property. If it is nil (in that nothing has been set to equal the `delegate` property, then the `feedBaby()` method will not get called.
+This `wantsFood()` function can be called on by any instance of a `Baby`. It will then (using optional chaining) attempt to call on a function on the instance property named `delegate`, which is of type `ParentDelegate?`. If it's _not_ nil, then it will call on the `feedBaby()` function on that instance, which was assigned to the `delegate` property. If it is nil (in that nothing has been set to equal the `delegate` property, then the `feedBaby()` method will not get called.
 
 But this behavior is exactly what we want. The baby doesn't care who the `delegate` is. It could be anything. As long as someone is around to be able to respond to feeding the baby, the baby is fine. 
 

@@ -4,14 +4,15 @@
 
 > If you cannot do great things, do small things in a great way. -[Napoleon Hill](https://en.wikipedia.org/wiki/Napoleon_Hill) 
 
+## Overview 
+
+In this lesson. we'll work with procols and delegates. 
+
 ## Learning Objectives
 
-* Utilize protocols as:
-	* a parameter type or return type in a function or initializer
-	* the type of a constant, variable, or property
-	* the type of items in an array, dictionary, or other container
-* Understand the delegation pattern
-* Create protocols / delegates amongst classes and structs
+* List and explain the various places where you can utilize protocols 
+* Explain the delegation pattern
+* Create protocols and delegates amongst classes and structs
 
 ## Protocols
 
@@ -165,7 +166,7 @@ let maryann = Mom(name: "Maryann")
 
 We have two types here. `Baby` and `Mom`. Neither perform any functionality right now, they both have an instance property called `name` of type `String`. 
 
-Lets add some functionality to the `Mom` structure that will allow any instance of `Mom` to be able to feed a baby.
+Let's add some functionality to the `Mom` structure that will allow any instance of `Mom` to be able to feed a baby.
 
 ```swift
 class Mom {

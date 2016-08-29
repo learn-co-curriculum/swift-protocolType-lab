@@ -1,4 +1,4 @@
-# Protocols as Types, Delegation
+# Protocols as Types and Delegation
 
 ![Drawing](http://i.imgur.com/SNKZqeU.jpg?1)  
 

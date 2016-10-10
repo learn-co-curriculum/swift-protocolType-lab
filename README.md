@@ -63,7 +63,7 @@ Because it is a type, you can use a protocol in many places where other types ar
 Let's create a function we're familiar with.
 
 ```swift
-func sayHelloTo(person: String) {
+func sayHelloTo(_ person: String) {
     print("Hello \(person)")
 }
 
@@ -74,14 +74,12 @@ sayHelloTo("George")
 `person` here is the name of the argument of type `String`. So the type of this argument is `String`. There's nothing stopping us from using our protocols as types here in arguments to a function, so lets do that.
 
 ```swift
-func printYourFavThings(entity: FavoriteThings) {
+func printYourFavThings(_ entity: FavoriteThings) {
      
 }
 ```
 
 We created a function called `printYourFavThings(_:)` that takes in one argument called `entity` of type `FavoriteThings`. In the scope of this function, we can _only_ access the properties and functions available to `FavoriteThings`. Those are `favColor`, `favIcecream` and `favSong`.  If I type `entity` out and a period to see what I have access to, it will only be these three items.
-
-![](http://i.imgur.com/Q8ldITY.png)
 
 Lets finish the implementation:
 
@@ -115,7 +113,7 @@ Here's an example of constant called `favorites` of type [`FavoriteThings`]. It 
 Lets loop over the array and print out some items.
 
 ```swift
-for entity in favorites {
+for element in favorites {
     printYourFavThings(entity)
 }
 
@@ -128,7 +126,7 @@ for entity in favorites {
 // The song I listen to the most is Foldgers In Your Cup
 ```
 
-The first time through this for loop, `entity` is `frisky`. Within the scope of this for loop, we don't know that `entity` is a `Cat`, we just know that it's a `FavoriteThings`, which means we only have access to the functions/properties available to a `FavoriteThings` type, not a `Cat`. The second time through the for loop, `entity` is now `jeff`, which is a `Person`. Similarly, we only have access to the properties available on `FavoriteThings`.
+The first time through this for loop, `element` is `frisky`. Within the scope of this for loop, we don't know that `element` is a `Cat`, we just know that it's a `FavoriteThings`, which means we only have access to the functions/properties available to a `FavoriteThings` type, not a `Cat`. The second time through the for loop, `entity` is now `jeff`, which is a `Person`. Similarly, we only have access to the properties available on `FavoriteThings`.
 
 # Delegation
 
@@ -192,7 +190,7 @@ class Baby {
         self.name = name
     }
     
-    func wantsFoodFromMom(mother: Mom) {
+    func wantsFoodFrom(mom mother: Mom) {
         mother.feedBaby()
     }
 }
@@ -201,7 +199,7 @@ class Baby {
 If we wanted to call on this function, we would do so like this:
 
 ```swift
-jim.wantsFoodFromMom(maryann)
+jim.wantsFoodFrom(mom: maryann)
 ```
 
 This instance method on any `Baby` can be called. When it is called, you must pass in an instance of `Mom`. Here we're passing in `maryann`, which is an instance of `Mom`. 
@@ -271,7 +269,7 @@ class Mom: ParentDelegate {
 }
 ```
 
-We need to know establish the connection. We know that the `delegate` instance property on `jim` is nil (by default). Lets fix that.
+We need to know establish the connection. We know that the `delegate` instance property on `jim` is nil (by default). Let's fix that.
 
 ```swift
 jim.delegate = maryann
@@ -289,7 +287,7 @@ jim.wantsFood()
 
 When this method runs, because `maryann` has been assigned to equal the `delegate` property on `jim`. Because `maryann` is an instance of a `Mom`, we will jump to `Mom`'s implementation of this method.
 
-But going back to what we stated earlier, what if `maryann` runs to the store. Who will watch over the kid. Lets create an Aunt class.
+But going back to what we stated earlier, what if `maryann` runs to the store. Who will watch over the baby boy? Let's create an Aunt class.
 
 ```swift
 class Aunt: ParentDelegate {
@@ -307,7 +305,7 @@ class Aunt: ParentDelegate {
 let patty = Aunt(name: "Patty")
 ```
 
-Here, this new class called `Aunt` adopts and conforms to the `ParentDelegate` protocol. It's implementation of `feedBaby()` is slightly different, and that's OK. My aunt is awesome, she would give pizza whenever I wanted.
+Here, this new class called `Aunt` adopts and conforms to the `ParentDelegate` protocol. It's implementation of `feedBaby()` is slightly different, and that's OK. Jim's aunt is awesome.
 
 So now if we want to change the `delegate` property on `jim`, we do so like this.
 
@@ -323,10 +321,6 @@ jim.wantsFood()
 ```
 
 This is an example of handing off responsibilities of one class to another. At the end of the day, it boils down to a form of communication between two classes or structs. It's a way for one instance to communicate to another instance. But not only communicating, it's a way for one class or structure to hand over some of its responsibilities.
-
-
-
-
 
 
 

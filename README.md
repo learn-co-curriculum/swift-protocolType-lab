@@ -100,7 +100,7 @@ printYourFavThings(frisky)
 // The song I listen to the most is Meow Mix
 ```
 
-We're calling on this newly made function, `printYourFavThings(_:)`, passing in something that conforms to the `FavoriteThings` protocol (`frisky` does). When we to print `entity.favColor` we know that this code will run because anything passed into this function conforms to this protocol, which means it _must_ have this property.
+We're calling on this newly made function, `printYourFavThings(_:)`, passing in something that conforms to the `FavoriteThings` protocol (`frisky` does). When we want to print `entity.favColor` we know that this code will run because anything passed into this function conforms to this protocol, which means it _must_ have this property.
 
 What about storing protocol types in an array?
 
@@ -269,7 +269,7 @@ class Mom: ParentDelegate {
 }
 ```
 
-We need to know establish the connection. We know that the `delegate` instance property on `jim` is nil (by default). Let's fix that.
+We need to no establish the connection. We know that the `delegate` instance property on `jim` is nil (by default). Let's fix that.
 
 ```swift
 jim.delegate = maryann

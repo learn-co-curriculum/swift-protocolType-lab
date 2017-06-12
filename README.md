@@ -114,7 +114,7 @@ Lets loop over the array and print out some items.
 
 ```swift
 for element in favorites {
-    printYourFavThings(entity)
+    printYourFavThings(element)
 }
 
 // My favorite color is Blue
@@ -326,3 +326,5 @@ This is an example of handing off responsibilities of one class to another. At t
 
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/ProtocolsAsTypes'>Protocols as Types</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/swift-protocolType-lab'>Protocols as Types and Delegation</a> on Learn.co and start learning to code for free.</p>

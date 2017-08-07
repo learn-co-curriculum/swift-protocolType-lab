@@ -84,7 +84,7 @@ We created a function called `printYourFavThings(_:)` that takes in one argument
 Lets finish the implementation:
 
 ```swift
-func printYourFavThings(entity: FavoriteThings) {
+func printYourFavThings(_ entity: FavoriteThings) {
     print("My favorite color is \(entity.favColor)")
     print("Icecream is great, my fav is \(entity.favIcecream)")
     print("The song I listen to the most is \(entity.favSong)")
@@ -114,7 +114,7 @@ Lets loop over the array and print out some items.
 
 ```swift
 for element in favorites {
-    printYourFavThings(entity)
+    printYourFavThings(element)
 }
 
 // My favorite color is Blue
@@ -141,8 +141,8 @@ Lets paint the picture.
 ```swift
 class Baby {
     var name: String
-    
-init(name: String) {
+		
+		init(name: String) {
         self.name = name
     }
 }
@@ -326,3 +326,5 @@ This is an example of handing off responsibilities of one class to another. At t
 
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/ProtocolsAsTypes'>Protocols as Types</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/swift-protocolType-lab'>Protocols as Types and Delegation</a> on Learn.co and start learning to code for free.</p>
